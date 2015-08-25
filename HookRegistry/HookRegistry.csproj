@@ -35,6 +35,7 @@
     <Compile Include="HookRegistry.cs" />
     <Compile Include="JsonHistLogger.cs" />
     <Compile Include="UseWebAuth.cs" />
+    <Compile Include="InternalMode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System">
