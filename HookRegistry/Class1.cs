@@ -22,10 +22,8 @@ namespace Hooks
         object OnCall(string typeName, string methodName, object thisObj, params object[] args)
         {
             var objectdialog = (OptionsUI) thisObj;
-            objectdialog.musicSlider.value = 0;
-            objectdialog.backText.text =
-                "( ͡° ͜ʖ ͡°) ";
-            objectdialog.backText.rectTransform.sizeDelta = new Vector2(objectdialog.backText.preferredWidth,objectdialog.backText.flexibleHeight);
+            var myconsole = new GameObject().AddComponent<Console>();
+
             return null;
         }
     }

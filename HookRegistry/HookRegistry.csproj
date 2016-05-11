@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Console.cs" />
     <Compile Include="HookRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
