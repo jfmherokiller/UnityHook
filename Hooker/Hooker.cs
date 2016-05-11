@@ -18,7 +18,7 @@ namespace Hooker
 				return;
 			}
 			var dataPath = args[0];
-			foreach (var s in new[] { "Assembly-CSharp-firstpass", "Assembly-CSharp" }) {
+			foreach (var s in new[] { "Assembly-CSharp-firstpass", "Assembly-CSharp", "UnityEngine" }) {
 				var inStream = File.Open(s + ".dll", FileMode.Open, FileAccess.Read);
 				var scriptAssembly = AssemblyDefinition.ReadAssembly(inStream);
 				var hooker = new Hooker(scriptAssembly.MainModule);
@@ -35,7 +35,7 @@ namespace Hooker
 				scriptAssembly.Write(s + ".out.dll");
 			}
 
-			foreach (var assemblyName in new []{"Assembly-CSharp", "Assembly-CSharp-firstpass", "HookRegistry", "Newtonsoft.Json"})
+			foreach (var assemblyName in new []{"Assembly-CSharp", "Assembly-CSharp-firstpass", "HookRegistry", "Newtonsoft.Json", "UnityEngine" })
 			{
 				var srcName = assemblyName + ".dll";
 				if (File.Exists(assemblyName + ".out.dll"))
